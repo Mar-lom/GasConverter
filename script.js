@@ -2,7 +2,7 @@ const gasPriceInput = document.getElementById('input')
 const usdButton = document.getElementById("usdButton")
 const cadButton = document.getElementById("cadButton")
 const result = document.getElementById("result")
-
+//let currentExchange = document.getElementById("currentExchange")
 
 usdButton.addEventListener("click", async()=> {
       const results = await ConvertGalllonsToLiters(gasPriceInput.value)   
@@ -16,8 +16,6 @@ usdButton.addEventListener("click", async()=> {
     }
    
 })
-
-
 
 cadButton.addEventListener("click", async()=> {
 
@@ -34,9 +32,6 @@ cadButton.addEventListener("click", async()=> {
 
 // Boarder Fill up
 // compares prices of grandportage and rydens in liters to the ones in town
-
-
-
 
 const literPerGallon = 3.78541;
 const gallonsPerLiter = 0.264172;
@@ -67,6 +62,7 @@ const options = {
 
 
 
+
 async function ConvertLitersToGallons(canadianPrice){
     const result = await currencyUsd;
     const rounded = result.toFixed(2) 
@@ -86,8 +82,7 @@ async function ConvertGalllonsToLiters(americanPrice){
     return roundedUp
 }
 
-
-
-
-//ConvertGalllonsToLiters(2.34);
-//ConvertLitersToGallons(1.19)
+currencyCad.then(data => {
+     const currentExchange = `<p><b>${data} CAD/USD</p>`
+    document.getElementById('currentExchange').insertAdjacentHTML('beforeend', currentExchange)
+})

@@ -7,46 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">Marcos US/CAD Gas Converter</a>
-    </nav>
-<!-- Hero -->
-<div class="p-4 shadow-4 rounded-3" style="background-color: hsl(0, 0%, 94%);">
-  <h2>Hello world!</h2>
-  <p>
-    This is a simple hero unit, a simple Hero-style component for calling extra
-    attention to featured content or information.
-  </p>
-
-  <hr class="my-4" />
-
-  <p>
-    It uses utility classes for typography and spacing to space content out within the
-    larger container.
-  </p>
-    Learn more
-  </button>
-</div>
-<!-- Hero -->
-
-    
-      <form action="">
-        <div class="form-group">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="$ Gas Price" id="input" >
-            <button class="btn btn-outline-secondary bg-primary text-light"id="usdButton" type="button">USD/gal</button>
-            <button class="btn btn-primary bg-danger text-light"id="cadButton" type="button">CAD/Ltr</button>                 
-          </div>    
-         <br>
-          <p id="result"></p>
+    <div class="container p-3 my-3 border text-center">
+      <h1>Gas Converter</h1>
+      <p>Find the price of American priced gas to canadian.</p>    
+      <p>Current Exchange Rate</p>
+      <p id="currentExchange"></p>
+      <div class="container">
+        <div class="row">      
+      <div class="col">
+        <input type="text" id="input" aria-label="Large">
+      </div>
+      <div class="row p-3">
+        <div class="col ">
+          <button type="button" id="usdButton" class="btn btn-danger">Gallon/USD -> Liter/CAD</button>
+          <button type="button" id="cadButton" class="btn btn-primary">Liter/USD -> Gallon/CAD</button>
         </div>
- 
-
-        
-      </form>
-
+      </div>     
+        </div>
+      </div>
+      <h1 id="result"></h1>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
   </body>
